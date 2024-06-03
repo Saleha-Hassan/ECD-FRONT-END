@@ -38,6 +38,13 @@ import AddIcon from '@mui/icons-material/Add';
 import GroupsIcon from '@mui/icons-material/Groups';
 import { SettingsInputAntennaSharp } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
+import DiscountIcon from '@mui/icons-material/Discount';
+import HomeIcon from '@mui/icons-material/Home';
+import WcIcon from '@mui/icons-material/Wc';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import WorkIcon from '@mui/icons-material/Work';
+import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 const drawerWidth = 230;
 
 
@@ -305,7 +312,7 @@ const renderMobileMenu = (
   const listItems = [
     {
       text: 'Home',
-      icon: <GroupsIcon />,
+      icon: <HomeIcon />,
       onClick:()=>changeRoute('/'),
       state:null,
       nestedItems: [
@@ -318,14 +325,14 @@ const renderMobileMenu = (
       onClick:()=>setOpenAdmission(!openAdmission),
       state:openAdmission,
       nestedItems: [
-        { text: 'Add', icon: <MailIcon  />,onClick:()=>changeRoute('/Add-Admission')},
-        { text: 'List', icon: <MailIcon />}
+        { text: 'Add', icon: <AddIcon  />,onClick:()=>changeRoute('/Add-Admission')},
+        { text: 'List', icon: <FormatListBulletedIcon/>}
         // Add more nested items here
       ],
     },
     {
       text: 'Finance',
-      icon: <InboxIcon />,
+      icon: <AddBusinessIcon/>,
       onClick:()=>setOpenFinance(!finance),
       state:finance,
       nestedItems: [
